@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block body %}
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="enter your name">
+    <input type="text" name="desc" placeholder="enter  a desc">
+    <input type="file" name="img" >
+    <input type="text" name="year" placeholder="enter your year">
+    <input type="submit">
+
+</form>
+
+</body>
+</html>
